@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xgz.mapper.MeetingMapper">
+  <resultMap id="meetingResultMap" type="com.xgz.entity.Meeting">
+      <id property="id" column="id"/>
+      <result property="title" column="title"/>
+      <result property="loc" column="loc"/>
+      <result property="time" column="time"/>
+      <result property="sendId" column="send_id"/>
+      <result property="receiveId" column="receive_id"/>
+      <collection property="emps" ofType="com.xgz.entity.Emp" javaType="java.util.List">
+          <id property="empno" column="id"/>
+          <result property="ename" column="ename"/>
+      </collection>
+  </resultMap>
+    <select id="getMeetingsAndSendName" resultMap="meetingResultMap">
+        SELECT meeting.*,ename from meeting,emp where send_id = empno and receive_id = #{receive_id} ORDER BY time desc
+    </select>
+</mapper>
