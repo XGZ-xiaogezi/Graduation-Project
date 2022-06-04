@@ -1,4 +1,6 @@
 # Graduation-Project
+## oscs
+[![OSCS Status](https://www.oscs1024.com/platform/badge/XGZ-xiaogezi/Graduation-Project.svg?size=large)](https://www.oscs1024.com/project/XGZ-xiaogezi/Graduation-Project?ref=badge_large)
 ## 毕业设计-办公自动化
 ### 第一次做个像样的小项目，难免有很多疏漏
 ### 主要框架：Vue+SpringBoot+Mybatis
